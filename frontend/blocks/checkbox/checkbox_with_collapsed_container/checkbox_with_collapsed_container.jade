@@ -1,0 +1,12 @@
+.form-group(class="#{_prefix}-form-group error-#{name} #{cls} clearfix")
+    .checkbox-container
+    if showLabel
+        label.container-label.control-label(
+            class=(labelWidth && "col-sm-#{labelWidth}")
+            for=id
+        )= label
+    div(class=[
+        labelWidth && "col-sm-#{12 - labelWidth}",
+        labelWidth && !showLabel && "col-sm-offset-#{labelWidth}"
+    ])
+        .collapsed-container

@@ -1,0 +1,44 @@
+@import "../../styles/_variables.css";
+$backgroundColor: #fff;
+$borderColor: #ccc;
+$cursorBackgroundColor: #428bca;
+$cursorTextColor: #fff;
+
+.$(cls-prefix)-fieldset {
+  .twitter-typeahead {
+    width: 100%;
+  }
+
+  .tt-menu {
+    width: 100%;
+    min-width: 160px;
+    max-height: 220px;
+    margin-top: 2px;
+    padding: 5px 0;
+    background-color: $backgroundColor;
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+
+    [class*=tt-dataset] {
+      max-height: inherit;
+      overflow-y: auto;
+    }
+  }
+
+  .tt-suggestion {
+    display: block;
+    padding: 3px 20px;
+
+    &.tt-cursor,
+    &:hover {
+      color: $cursorTextColor;
+      background-color: $cursorBackgroundColor;
+
+      a {
+        color: $cursorTextColor;
+      }
+    }
+  }
+}

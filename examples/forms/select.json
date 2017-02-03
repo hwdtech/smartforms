@@ -1,0 +1,63 @@
+{
+  "cls": "form",
+  "form": {
+    "month": {
+      "block": "select",
+      "name": "month",
+      "label": "месяц",
+      "value": "11",
+      "values": [
+        {
+          "name": "Январь (недоступно)",
+          "value": "01",
+          "disabled": true
+        },
+        {
+          "name": "Февраль",
+          "value": "02",
+          "disabled": false
+        },
+        {
+          "name": "Март",
+          "value": "03"
+        },
+        {
+          "name": "Апрель",
+          "value": "04"
+        },
+        {
+          "name": "Май",
+          "value": "05"
+        },
+        {
+          "name": "Июнь",
+          "value": "06"
+        },
+        {
+          "name": "Июль",
+          "value": "07"
+        },
+        {
+          "name": "Август",
+          "value": "08"
+        },
+        {
+          "name": "Сентябрь",
+          "value": "09"
+        },
+        {
+          "name": "Октябрь",
+          "value": "10"
+        },
+        {
+          "name": "Ноябрь",
+          "value": "11"
+        },
+        {
+          "name": "Декабрь",
+          "value": "12"
+        }
+      ]
+    }
+  }
+}

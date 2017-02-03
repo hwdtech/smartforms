@@ -1,0 +1,22 @@
+mixin buttonClose
+    button.close(
+        type="button"
+        data-dismiss="modal"
+        aria-label="Close"
+    )
+        i.glyphicon.glyphicon-remove
+
+div(class="#{_prefix}-information-modal")
+    #modal-dialog.modal.fade.in.modal-inform.modal-inform-success.modal-success-payment(
+        tabindex='-1'
+        role='dialog'
+        aria-labelledby='myModalLabel'
+        aria-hidden='false'
+        data-keyboard='false'
+        data-backdrop='static'
+        style='display: block; padding-right: 15px;'
+    )
+        .modal-dialog.modal-box-success
+            .modal-content
+                +buttonClose
+                .modal-body

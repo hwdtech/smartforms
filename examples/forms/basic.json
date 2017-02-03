@@ -1,0 +1,60 @@
+{
+  "cls": "form",
+  "form": {
+    "name": {
+      "block": "input",
+      "type": "text",
+      "name": "name",
+      "label": "Имя",
+      "placeholder": "Ваше имя",
+      "suppressLabel": true
+    },
+    "date": {
+      "block": "date",
+      "value": "14.09.1916",
+      "label": "Дата рождения"
+    },
+    "okButton": {
+      "block": "button",
+      "label": "OK",
+      "cls": "btn-primary"
+    },
+    "disabledButton": {
+      "block": "button",
+      "label": "I'm disabled",
+      "disabled": true,
+      "cls": "btn-primary"
+    },
+    "cancelButton": {
+      "block": "button",
+      "label": "Cancel",
+      "cls": "btn-default"
+    },
+    "deleteButton": {
+      "block": "button",
+      "label": "Delete",
+      "glyphicon": "trash",
+      "cls": "btn-default"
+    },
+    "envelopeButton": {
+      "block": "button",
+      "glyphicon": "envelope",
+      "cls": "btn-link"
+    }
+  },
+  "schema": [
+    "name",
+    "date",
+    {
+      "name": "actions",
+      "block": "actions",
+      "items": [
+        "okButton",
+        "disabledButton",
+        "cancelButton",
+        "deleteButton",
+        "envelopeButton"
+      ]
+    }
+  ]
+}

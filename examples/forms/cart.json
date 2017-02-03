@@ -1,0 +1,92 @@
+{
+  "block": "modal",
+  "title": "Оплата платежей",
+  "submitButton": {
+    "label": "Оплатить"
+  },
+  "imageGroup": {
+    "label": "Выбрать способ оплаты:",
+    "name": "Способ оплаты",
+    "images": [
+      {
+        "selected": true,
+        "sourceType": "VISA",
+        "url": "https://vp.ru/resources/media/images/cart/card/visa.png"
+      },
+      {
+        "sourceType": "VISA_ELECTRON",
+        "url": "https://vp.ru/resources/media/images/cart/card/visa-electron.png"
+      },
+      {
+        "sourceType": "MASTERCARD",
+        "url": "https://vp.ru/resources/media/images/cart/card/mastercard.png"
+      },
+      {
+        "sourceType": "MAESTRO",
+        "url": "https://vp.ru/resources/media/images/cart/card/maestro.png"
+      }
+    ]
+  },
+  "body": {
+    "form": {
+      "Платеж1": {
+        "block": "checkGroupListItem",
+        "checked": true,
+        "title": "Билайн, сотовая связь",
+        "price": "566.00",
+        "status": "Платёж № 15925488 создан 02/08/2016 12:14",
+        "content": "<p><strong>Приём платежа в пользу:</strong> ОАО \"Вымпел-Коммуникации\", ИНН 7713076301, р/с 40702810138180121008, Московском банке Сбербанка России ОАО г. Москва, БИК 044525225</p><p><strong>Параметры платежа:</strong>&nbsp;Номер телефона: 9835634020;</p><p>Сумма к зачислению: 566.00&nbsp;руб.; Комиссия: 16.98&nbsp;руб.</p>",
+        "footer": {
+          "linkText": "изменить",
+          "formUrl": "/static/examples/forms/registration.json"
+        }
+      },
+      "Платеж2": {
+        "block": "checkGroupListItem",
+        "checked": true,
+        "title": "МТС",
+        "price": "566.00",
+        "status": "Платёж № 15927721 создан 02/08/2016 17:40",
+        "content": "<p><strong>Приём платежа в пользу:</strong> ОАО \"МТС\", ИНН 7740000076, р/с 40702810300000001034, «МТС-Банк» (ПАО) г. Москва, БИК 044525232</p><p><strong>Параметры платежа:</strong>&nbsp;Номер телефона: 9609881991;</p><p>Сумма к зачислению: 98.00&nbsp;руб.; Комиссия: 2.94&nbsp;руб.</p>",
+        "footer": {
+          "linkText": "изменить",
+          "formUrl": "/static/examples/forms/registration.json"
+        }
+      },
+      "Платеж3": {
+        "block": "checkGroupListItem",
+        "checked": true,
+        "title": "Билайн, сотовая связь",
+        "price": "566.00",
+        "status": "Платёж № 15925488 создан 02/08/2016 12:14",
+        "content": "<p><strong>Приём платежа в пользу:</strong> ОАО \"Вымпел-Коммуникации\", ИНН 7713076301, р/с 40702810138180121008, Московском банке Сбербанка России ОАО г. Москва, БИК 044525225</p><p><strong>Параметры платежа:</strong>&nbsp;Номер телефона: 9835634020;</p><p>Сумма к зачислению: 566.00&nbsp;руб.; Комиссия: 16.98&nbsp;руб.</p>",
+        "footer": {
+          "linkText": "изменить",
+          "formUrl": "/static/examples/forms/registration.json"
+        }
+      },
+      "Сумма": {
+        "block": "static",
+        "label": "Итого к оплате:",
+        "labelWidth": 3,
+        "value": 798.46,
+        "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\"><\/span>",
+        "summarize": [
+          "Платежи"
+        ]
+      }
+    },
+    "schema": [
+      {
+        "name": "Платежи",
+        "block": "checkGroupList",
+        "items": [
+          "Платеж1",
+          "Платеж2",
+          "Платеж3"
+        ]
+      },
+      "Сумма"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+extends ../base/base.jade
+
+block inner
+    mixin input
+        input.form-control(
+            id=id
+            type=type
+            class=cls
+            name=name
+            value=value
+            disabled=disabled
+            placeholder=placeholder
+            style=(inputWidth ? "width:#{inputWidth}" : undefined)
+        )
+        if newFormLink
+            a.new-form-link(
+                href=newFormLink.href
+                class="#{_prefix}-a #{cls}"
+            ) !{newFormLink.text}
+
+    if rightMark
+        span.right-mark-input
+            +input
+        span.right-mark
+            != rightMark
+    else
+        +input

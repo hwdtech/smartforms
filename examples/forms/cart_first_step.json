@@ -1,0 +1,125 @@
+{
+  "block": "modal",
+  "submitButton": {
+    "label": "Перейти к оплате"
+  },
+  "iagree": {
+    "htmlLabel": "Я соглашаюсь с <a href=\"/legal-information/docs/\" target=\"_blank\">условиями<\/a> договора-оферты",
+    "checked": true
+  },
+  "isPanelGroup": true,
+  "body": {
+    "form": {
+      "Платеж1": {
+        "block": "panel",
+        "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"><\/span>",
+        "title": "Билайн, сотовая связь",
+        "subtitle": "Комиссия 3%",
+        "cost": "983.00",
+        "imgUrl": "https://vp.ru/pay/resources/media/images/provider/logo/beeline.jpg",
+        "collapserShowMessage": "показать платёж",
+        "collapserHideMessage": "скрыть платёж",
+        "form": {
+          "form": {
+            "Номер телефона": {
+              "block": "text",
+              "label": "Номер телефона",
+              "labelWidth": 3,
+              "mask": "+7 9999999999",
+              "maskPlaceholder": "_",
+              "inputWidth": "215px",
+              "value": "9835634020",
+              "validationRules": [
+                {
+                  "rule": "телефон",
+                  "errorMessage": "Проверьте правильность введенного номера телефона. Номер телефона состоит из цифр и содержит 10 символов."
+                }
+              ]
+            },
+            "Сумма": {
+              "block": "text",
+              "placeholder": "0",
+              "label": "Сумма",
+              "labelWidth": 3,
+              "inputWidth": "200px",
+              "textAlign": "right",
+              "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"><\/span>",
+              "value": "23.00",
+              "validationRules": [
+                {
+                  "rule": "число",
+                  "errorMessage": "Неверно указана сумма."
+                },
+                {
+                  "rule": "5 <= Сумма && Сумма <= 13000",
+                  "errorMessage": "Сумма платежа не может быть меньше 5 руб. и больше 13 000 руб."
+                }
+              ]
+            }
+          },
+          "schema": [
+            "Номер телефона",
+            "Сумма"
+          ]
+        }
+      },
+      "Платеж2": {
+        "block": "panel",
+        "title": "МТС",
+        "subtitle": "Комиссия 3%",
+        "imgUrl": "https://vp.ru/pay/resources/media/images/provider/logo/mts.png",
+        "cost": "128.00",
+        "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"><\/span>",
+        "collapserShowMessage": "показать платёж",
+        "collapserHideMessage": "скрыть платёж",
+        "form": {
+          "form": {
+            "Номер телефона": {
+              "block": "text",
+              "label": "Номер телефона",
+              "labelWidth": 3,
+              "mask": "+7 9999999999",
+              "maskPlaceholder": "_",
+              "inputWidth": "215px",
+              "value": "9835634020",
+              "validationRules": [
+                {
+                  "rule": "телефон",
+                  "errorMessage": "Проверьте правильность введенного номера телефона. Номер телефона состоит из цифр и содержит 10 символов."
+                }
+              ]
+            },
+            "Сумма": {
+              "block": "text",
+              "placeholder": "0",
+              "label": "Сумма",
+              "labelWidth": 3,
+              "inputWidth": "200px",
+              "textAlign": "right",
+              "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"><\/span>",
+              "value": "23.00",
+              "validationRules": [
+                {
+                  "rule": "число",
+                  "errorMessage": "Неверно указана сумма."
+                },
+                {
+                  "rule": "5 <= Сумма && Сумма <= 13000",
+                  "errorMessage": "Сумма платежа не может быть меньше 5 руб. и больше 13 000 руб."
+                }
+              ]
+            }
+          },
+          "schema": [
+            "Номер телефона",
+            "Сумма"
+          ]
+        }
+      }
+    },
+    "schema": [
+      "Платеж1",
+      "Платеж2"
+    ]
+  }
+}

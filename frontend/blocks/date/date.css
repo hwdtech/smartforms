@@ -1,0 +1,40 @@
+$table_item_border_color: #e5e5e5;
+
+.datepicker {
+  border: 0;
+  border-radius: 5px;
+  padding: 3px 0 0;
+
+  table tr {
+    td.day {
+      border: 1px solid $table_item_border_color;
+      text-shadow: none;
+
+      &:first-child {
+        border-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &:hover {
+        background-color: #eaedf1;
+      }
+    }
+
+    td,
+    th {
+      border-radius: 0;
+
+      &.active.active {
+        &:hover,
+        & {
+          border-color: $table_item_border_color;
+          background-color: #0a9acb;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

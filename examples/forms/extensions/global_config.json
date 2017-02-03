@@ -1,0 +1,242 @@
+{
+  "адрес": {
+    "block": "address",
+    "minLength": 3,
+    "highlight": true,
+    "label": "Адрес",
+    "labelWidth": 3,
+    "layout": [
+      1,
+      3
+    ],
+    "url": "https://dadata.ru/api/v2/suggest/address/",
+    "items": {
+      "address": {
+        "validationRules": [
+
+        ]
+      },
+      "house": {
+        "validationRules": [
+
+        ]
+      },
+      "additional": {
+        "block": "input"
+      },
+      "apartment": {
+        "block": "input"
+      }
+    },
+    "settings": {
+      "type": "POST",
+      "dataType": "json",
+      "headers": {
+        "Authorization": "Token ffc44375a4d8268790b8aa1bc9d840aedd5aca40",
+        "Content-Type": "application/json"
+      },
+      "data": {
+        "count": 20,
+        "locations": [
+          "Омская"
+        ]
+      }
+    }
+  },
+  "лицевой-счет": {
+    "block": "input",
+    "type": "text",
+    "disabled": false,
+    "label": "Лицевой счёт",
+    "labelWidth": 3,
+    "name": "лицевой-счет"
+  },
+  "почта": {
+    "block": "input",
+    "type": "text",
+    "disabled": false,
+    "label": "E-mail",
+    "labelWidth": 3,
+    "name": "почта"
+  },
+  "фамилия": {
+    "block": "input",
+    "type": "text",
+    "placeholder": "фамилия",
+    "validationRules": [
+
+    ]
+  },
+  "имя": {
+    "block": "input",
+    "type": "text",
+    "placeholder": "имя",
+    "validationRules": [
+
+    ]
+  },
+  "отчество": {
+    "block": "input",
+    "type": "text",
+    "placeholder": "отчество",
+    "validationRules": [
+
+    ]
+  },
+  "плательщик": {
+    "block": "fieldset",
+    "label": "Плательщик",
+    "labelWidth": 3,
+    "items": [
+      "фамилия",
+      "имя",
+      "отчество"
+    ]
+  },
+  "фио-одной-строкой": {
+    "block": "text",
+    "label": "Плательщик",
+    "labelWidth": 3,
+    "validationRules": [
+
+    ]
+  },
+  "год": {
+    "block": "select",
+    "value": "2017",
+    "values": [
+      {
+        "name": "2018",
+        "value": "2018"
+      },
+      {
+        "name": "2017",
+        "value": "2017"
+      },
+      {
+        "name": "2016",
+        "value": "2016"
+      }
+    ]
+  },
+  "месяц": {
+    "block": "select",
+    "values": [
+      {
+        "name": "Январь",
+        "value": "1"
+      },
+      {
+        "name": "Февраль",
+        "value": "2"
+      },
+      {
+        "name": "Март",
+        "value": "3"
+      },
+      {
+        "name": "Апрель",
+        "value": "4"
+      },
+      {
+        "name": "Май",
+        "value": "5"
+      },
+      {
+        "name": "Июнь",
+        "value": "6"
+      },
+      {
+        "name": "Июль",
+        "value": "7"
+      },
+      {
+        "name": "Август",
+        "value": "8"
+      },
+      {
+        "name": "Сентябрь",
+        "value": "9"
+      },
+      {
+        "name": "Октябрь",
+        "value": "10"
+      },
+      {
+        "name": "Ноябрь",
+        "value": "11"
+      },
+      {
+        "name": "Декабрь",
+        "value": "12"
+      }
+    ]
+  },
+  "период-оплаты": {
+    "block": "fieldset",
+    "label": "Период оплаты",
+    "labelWidth": 3,
+    "layout": [
+      {
+        "count": 2,
+        "width": [
+          4,
+          4
+        ]
+      }
+    ],
+    "items": [
+      "месяц",
+      "год"
+    ]
+  },
+  "штрихкод": {
+    "block": "text",
+    "label": "Штрихкод",
+    "labelWidth": 3,
+    "mask": "999-99-999999-9",
+    "maskPlaceholder": "_",
+    "disabled": false,
+    "validationRules": [
+
+    ]
+  },
+  "всего-к-оплате": {
+    "block": "text",
+    "placeholder": "0",
+    "label": "Сумма2",
+    "labelWidth": 3,
+    "inputWidth": "200px",
+    "textAlign": "right",
+    "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"><\/span>",
+    "validationRules": [
+
+    ]
+  },
+  "телефон": {
+    "block": "text",
+    "label": "Номер телефона",
+    "labelWidth": 3,
+    "mask": "+7 9999999999",
+    "maskPlaceholder": "_",
+    "inputWidth": "215px",
+    "validationRules": [
+
+    ]
+  },
+  "платеж-корзины": {
+    "block": "panel",
+    "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"><\/span>",
+    "title": "-",
+    "subtitle": "Комиссия",
+    "cost": "00.00",
+    "imgUrl": "https://vp.ru/pay/resources/media/images/provider/logo/beeline.jpg",
+    "collapserShowMessage": "показать платёж",
+    "collapserHideMessage": "скрыть платёж",
+    "form": {
+    }
+  },
+  "разделитель": {
+    "block": "divider"
+  }
+}

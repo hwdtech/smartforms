@@ -1,0 +1,195 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-form-box {
+  position: relative;
+
+  .panel.panel-default {
+    .panel-heading.clickable {
+      cursor: pointer;
+      background-color: #f3f3f3;
+      border-bottom: 1px solid #e1e1e1;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      padding: 26px 38px;
+
+      &:hover {
+        .panel-collapser span {
+          color: #e01f2b;
+        }
+      }
+
+      .header-container {
+        @media (--tablet) {
+          min-height: 50px;
+          padding-left: 82px;
+        }
+
+        position: relative;
+
+        .header-image {
+          @media (--tablet) {
+            display: table;
+          }
+
+          display: none;
+          table-layout: fixed;
+          background: #fff;
+          border: 3px solid #fff;
+          border-radius: 5px;
+          height: 60px;
+          left: 0;
+          overflow: hidden;
+          position: absolute;
+          top: -5px;
+          width: 60px;
+
+          span {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+
+            img {
+              display: inline-block;
+              height: auto;
+              max-width: 100%;
+              vertical-align: middle;
+              border: 0;
+            }
+          }
+        }
+
+        .header-title {
+          margin-left: -12px;
+          margin-right: -12px;
+
+          .title-info {
+            display: table;
+            font-size: 15px;
+            height: 50px;
+            table-layout: fixed;
+            width: 100%;
+
+            h4 {
+              display: table-cell;
+              font-size: 19px;
+              line-height: 27px;
+              margin: 0;
+              vertical-align: middle;
+              width: 366px;
+            }
+
+            h5 {
+              color: #9e9e9e;
+              font-size: 14px;
+              line-height: 16px;
+              margin: 0;
+              padding: 5px 0 7px;
+              white-space: pre-wrap;
+              display: table-row;
+            }
+
+            .panel-collapser {
+              color: #96a7b7;
+              font-size: 13px;
+
+              span {
+                transition: all 0.15s ease-out;
+              }
+            }
+          }
+        }
+
+        .payment-label {
+          text-align: left;
+          font-size: 18px;
+
+          @media (--tablet) {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .panel-collapse {
+      padding: 40px 48px;
+
+      .panel-body {
+        border-top: none;
+        padding: 0;
+
+        .form-controls {
+          hr {
+            border-color: #e1e1e1;
+            margin: 40px 0 20px;
+          }
+
+          form.form-horizontal {
+            font-size: 13px;
+            margin: 0;
+
+            .form-group.form-group-submit {
+              margin-right: -15px;
+              margin-left: -15px;
+              margin-bottom: 15px;
+
+              .form-submit {
+                display: inline-block;
+                margin-right: 24px;
+
+                button {
+                  background-color: transparent;
+                  border-color: #0a9acb;
+                  color: #0a9acb;
+                  font-size: 13px;
+                  font-weight: 700;
+                  height: 42px;
+                  padding: 7px 18px;
+                  transition: all 0.15s ease-out;
+                  display: inline-block;
+                  margin-bottom: 0;
+                  text-align: center;
+                  vertical-align: middle;
+                  touch-action: manipulation;
+                  cursor: pointer;
+                  background-image: none;
+                  white-space: nowrap;
+                  line-height: 1.667;
+                  border-radius: 4px;
+                }
+              }
+
+              .form-delete {
+                display: inline;
+                margin-top: 0;
+
+                a.link-delete.vp-form-control.delete {
+                  vertical-align: -2px;
+                  border-bottom: 0;
+                  color: #e01f2b;
+                  display: inline-block;
+                  padding-left: 22px;
+                  position: relative;
+                  text-decoration: none;
+                  transition: all 0.15s ease-out;
+
+                  .icon-delete {
+                    background: inline("icon_delete.png") no-repeat -15px 0;
+                    height: 16px;
+                    left: 0;
+                    position: absolute;
+                    top: 1px;
+                    width: 15px;
+                  }
+
+                  span {
+                    border-bottom: 1px dashed #f0b6ba;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

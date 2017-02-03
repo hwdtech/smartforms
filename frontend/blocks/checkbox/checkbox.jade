@@ -1,0 +1,26 @@
+extends ../base/base.jade
+
+block inner
+    div(class="#{_prefix}-checkbox #{cls}")
+        .checkbox
+            .checkbox-wrapper
+                label.checkbox-label
+                    input(
+                        id=id
+                        name=name
+                        type="checkbox"
+                        checked=(checked && "checked")
+                        class=checkboxCls
+                    )
+            .text-wrapper
+                span!=htmlLabel
+                if helpIconMessage
+                    a.popover-icon(
+                        tabindex='0',
+                        data-toggle='popover',
+                        data-trigger='focus',
+                        data-placement='bottom',
+                        data-content=helpIconMessage,
+                        data-original-title='',
+                        title=''
+                    )

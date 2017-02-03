@@ -1,0 +1,72 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-modal-box-success-body {
+  .modal-box-success-body {
+    background: #f5f5f5 inline("success_border_top.png") repeat-x top;
+    border-radius: 10px;
+    padding: 40px 37px;
+
+    .vp-ab-test-motivation {
+      margin-bottom: 25px;
+
+      p {
+        font-size: 24px;
+        font-weight: 600;
+        color: #4b5c70;
+        line-height: 1.25;
+        font-family: "PF Beau Sans Pro";
+        margin: 0 0 12.5px;
+      }
+    }
+  }
+
+  .vp-ab-test-icons {
+    margin-bottom: 15px;
+
+    .g-col-xs-4 {
+      padding: 0;
+      float: left;
+      width: 33.33333333333333%;
+
+      a {
+        border-bottom: none;
+        color: #0a9acb;
+        text-decoration: none;
+        transition: all 0.15s ease-out;
+
+        img {
+          vertical-align: middle;
+          border: 0;
+        }
+      }
+    }
+
+    .categories-name {
+      font-size: 16px;
+      font-family: "PF Beau Sans Pro";
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      line-height: normal;
+      color: #4b5c70;
+      margin-top: 5px;
+      height: 57px;
+    }
+  }
+
+  .modal-inform-foot {
+    margin-bottom: 10px;
+
+    .btn-primary {
+      padding: 10px 28px;
+      font-size: 18px;
+      background-color: #0a9acb;
+      border: 0;
+      color: #fff;
+      font-family: "PF Beau Sans Pro";
+      font-weight: 700;
+      height: auto;
+      box-shadow: 0 3px 0 #006aa4;
+      transition: all 0.15s ease-out;
+    }
+  }
+}

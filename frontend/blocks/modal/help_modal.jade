@@ -1,0 +1,15 @@
+.modal.modal-invoice.fade(
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myModalLabel"
+    aria-hidden="true"
+    class="#{_prefix}-modal-invoice"
+    id="help_modal_#{id}"
+)
+    .modal-dialog
+        button.close(type="button", data-dismiss="modal")
+            i.glyphicon.glyphicon-remove
+            span.sr-only Закрыть
+        .modal-content
+            p #{help.helpTitle || help.message}
+            img(src=help.imageUrl)

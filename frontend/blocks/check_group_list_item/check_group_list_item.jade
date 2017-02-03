@@ -1,0 +1,20 @@
+li.item(class="#{_prefix}-check-group-list-item #{cls}")
+    .item-head.clearfix
+        .item-title
+            label
+                input(
+                    id=id
+                    name=name
+                    type="checkbox"
+                    checked=(checked && "checked")
+                )
+                = title
+                a.link-delete(href='#')
+                    i.icon.icon-delete
+        span.ruble.glyphicon.glyphicon-ruble(aria-hidden='true')
+        .item-price= price
+    .item-status= status
+    .item-body!= content
+    if footer
+        .item-foot
+            a.link-edit(href='#')= footer.linkText

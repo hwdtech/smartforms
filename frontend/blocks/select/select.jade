@@ -1,0 +1,16 @@
+extends ../base/base.jade
+
+block inner
+    div(
+        style=(inputWidth ? "width:#{inputWidth}" : undefined)
+    )
+        select.form-control(
+            id=id
+            name=name
+        )
+            each item in values
+                option(
+                    value=item.value
+                    disabled=item.disabled
+                    selected=item.selected
+                )= item.name

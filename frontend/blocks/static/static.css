@@ -1,0 +1,9 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-static {
+  font-size: 13px;
+
+  .form-control-static {
+    font-size: 17px;
+  }
+}

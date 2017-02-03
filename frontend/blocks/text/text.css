@@ -1,0 +1,22 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-form-group {
+  input.text-align-left {
+    text-align: left;
+  }
+
+  input.text-align-right {
+    text-align: right;
+  }
+
+  input.text-align-center {
+    text-align: center;
+  }
+
+  .has-error .form-control {
+    background-color: #fce8e9 !important;
+    border-color: $border-clr !important;
+    color: $red-danger;
+    box-shadow: none;
+  }
+}

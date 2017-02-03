@@ -1,0 +1,25 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-radio.radio {
+  label {
+    min-height: 19px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+
+    .jq-radio {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+    }
+
+    .radio-field {
+      display: inline-block;
+      margin-top: 14px;
+    }
+  }
+}

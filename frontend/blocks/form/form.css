@@ -1,0 +1,80 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-form {
+  .form-control {
+    height: 42px;
+    font-size: 15px;
+    line-height: 1.667;
+    color: #252525;
+    border: 1px solid $border-clr;
+
+    &:focus {
+      border-color: #b5e1ef;
+      box-shadow: inset 0 0 6px rgba(10, 154, 203, 0.2);
+    }
+
+    &[disabled] {
+      background-color: #f2f2f2;
+      color: #838383;
+      cursor: default;
+    }
+  }
+
+  .form-header {
+    font-size: 13px;
+    margin-bottom: 15px;
+    position: relative;
+
+    h2 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .new-form-link {
+      position: absolute;
+      right: 0;
+      top: 4px;
+      font-size: 13px;
+      border-bottom: 0;
+    }
+  }
+
+  .form-global-error {
+    .alert.alert-danger {
+      color: #a94442;
+      background-color: #f2dede;
+      border-color: #ebccd1;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+  }
+
+  .form-content {
+    .form-group {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    > .form-group {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .$(cls-prefix)-fieldset {
+      .input-set-col {
+        .form-group:last-child {
+          margin-bottom: 15px;
+        }
+      }
+
+      .input-set-row:last-child .form-group {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

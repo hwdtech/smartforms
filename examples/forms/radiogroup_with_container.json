@@ -1,0 +1,45 @@
+{
+  "cls": "form",
+  "form": {
+    "Вариант оплаты": {
+      "block": "radioGroupWithContainers",
+      "labelWidth": 3,
+      "options": [
+        {
+          "name": "К оплате за отопление (1/12):<br><small>(с учётом общей задолженности)</small><br>",
+          "value": "1/12",
+          "checked": true
+        },
+        {
+          "name": "К оплате за отопление (Факт):<br><small>(с учётом общей задолженности)</small><br>",
+          "value": "Факт"
+        }
+      ],
+      "containerOptions": {
+        "1/12": [
+          {
+            "name": "1/12",
+            "block": "text",
+            "textAlign": "right",
+            "inputWidth": "138px",
+            "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"><\/span>",
+            "placeholder": 0
+          }
+        ],
+        "Факт": [
+          {
+            "name": "Факт",
+            "block": "text",
+            "textAlign": "right",
+            "inputWidth": "138px",
+            "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"><\/span>",
+            "placeholder": 0
+          }
+        ]
+      }
+    }
+  },
+  "schema": [
+    "Вариант оплаты"
+  ]
+}

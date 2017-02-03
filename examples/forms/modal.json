@@ -1,0 +1,306 @@
+{
+  "block": "modal",
+  "title": "Модальное окно",
+  "imgUrl": "http://lorempixel.com/200/200/",
+  "iagree": {
+    "htmlLabel": "Я соглашаюсь с <a href=\"/legal-information/docs/\" target=\"_blank\">условиями<\/a> договора-оферты",
+    "checked": false
+  },
+  "submitButton": {
+    "label": "Перейти к оплате"
+  },
+  "body": {
+    "form": {
+      "accountId": {
+        "block": "input",
+        "type": "text",
+        "label": "Номер аккаунта",
+        "labelWidth": 3,
+        "name": "accountId"
+      },
+      "address": {
+        "block": "address",
+        "minLength": 3,
+        "highlight": true,
+        "label": "Адрес",
+        "labelWidth": 3,
+        "layout": [
+          1,
+          3
+        ],
+        "url": "https://dadata.ru/api/v2/suggest/address/",
+        "items": {
+          "address": {
+            "validationRules": [
+              {
+                "rule": "адрес",
+                "errorMessage": "Неверно указана улица. Название улицы может состоять из русских букв, цифр, точек, запятых и знаков /, ,\", ;, -, (, ).'"
+              }
+            ]
+          },
+          "house": {
+            "validationRules": [
+              {
+                "rule": "дом",
+                "errorMessage": "Неверно указан номер дома. Введите номер дома."
+              }
+            ]
+          },
+          "additional": {
+            "block": "input"
+          },
+          "apartment": {
+            "block": "input"
+          }
+        },
+        "settings": {
+          "type": "POST",
+          "dataType": "json",
+          "headers": {
+            "Authorization": "Token ffc44375a4d8268790b8aa1bc9d840aedd5aca40",
+            "Content-Type": "application/json"
+          },
+          "data": {
+            "count": 20,
+            "locations": [
+              "Омская"
+            ]
+          }
+        }
+      },
+      "div": {
+        "block": "divider"
+      },
+      "month": {
+        "block": "select",
+        "value": "06",
+        "values": [
+          {
+            "name": "Январь (недоступно)",
+            "value": "01"
+          },
+          {
+            "name": "Февраль",
+            "value": "02"
+          },
+          {
+            "name": "Март",
+            "value": "03"
+          },
+          {
+            "name": "Апрель",
+            "value": "04"
+          },
+          {
+            "name": "Май",
+            "value": "05"
+          },
+          {
+            "name": "Июнь",
+            "value": "06"
+          },
+          {
+            "name": "Июль",
+            "value": "07"
+          },
+          {
+            "name": "Август",
+            "value": "08"
+          },
+          {
+            "name": "Сентябрь",
+            "value": "09"
+          },
+          {
+            "name": "Октябрь",
+            "value": "10"
+          },
+          {
+            "name": "Ноябрь",
+            "value": "11"
+          },
+          {
+            "name": "Декабрь",
+            "value": "12"
+          }
+        ]
+      },
+      "year": {
+        "block": "select",
+        "value": "2016",
+        "values": [
+          {
+            "name": "2017",
+            "value": "2017"
+          },
+          {
+            "name": "2016",
+            "value": "2016"
+          },
+          {
+            "name": "2015",
+            "value": "2015"
+          },
+          {
+            "name": "2014",
+            "value": "2014"
+          }
+        ]
+      },
+      "lastname": {
+        "block": "input",
+        "type": "text",
+        "placeholder": "фамилия",
+        "name": "lastname",
+        "validationRules": [
+          {
+            "rule": "обязательное && русский",
+            "errorMessage": "Неверно введена фамилия. Значение должно быть указано и состоять только из русских букв."
+          }
+        ]
+      },
+      "firstname": {
+        "block": "input",
+        "type": "text",
+        "placeholder": "имя",
+        "validationRules": [
+          {
+            "rule": "обязательное && русский",
+            "errorMessage": "Неверно введено имя. Значение должно быть указано и состоять только из русских букв."
+          }
+        ]
+      },
+      "patronym": {
+        "block": "input",
+        "type": "text",
+        "placeholder": "отчество",
+        "validationRules": [
+          {
+            "rule": "обязательное && русский",
+            "errorMessage": "Неверно введено отчество. Значение должно быть указано и состоять только из русских букв."
+          }
+        ]
+      },
+      "Сумма": {
+        "block": "static",
+        "label": "Сумма",
+        "labelWidth": 3,
+        "value": 0,
+        "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\"><\/span>",
+        "summarize": [
+          "typeAndSum"
+        ]
+      },
+      "typeAndSum": {
+        "block": "array",
+        "columnHeaders": ["Прибор учета", "Текущие показания"],
+        "name": "typeAndSum",
+        "itemLabel": "Чек",
+        "maxLength": 6,
+        "helpMessage": "Список сумм к оплате может иметь максимум 6 видов платежа.",
+        "errorMessage": "Неверно указана услуга",
+        "labelRightMark": "'<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"></span>'",
+        "defaultValueForNewItem": "0.00",
+        "newItemInputTextAlign": "right",
+        "comment": {
+          "block": "comment",
+          "text": "Если поля вашей квитанции отличаются от представленных на экране, добавьте услугу, предварительно удалив ненужную. Максимальное количество полей - 6.",
+          "fontColor": "#252525",
+          "fontSize": "86%"
+        },
+        "actions": {
+          "label": {
+            "block": "label",
+            "labelText": "Добавить услугу"
+          },
+          "select": {
+            "block": "select",
+            "name": "service",
+            "values": [
+              {
+                "name": "-- выберите услугу --",
+                "value": ""
+              },
+              {
+                "name": "Печенье",
+                "value": "1"
+              },
+              {
+                "name": "Конфеты",
+                "value": "2"
+              },
+              {
+                "name": "Сок",
+                "value": "3"
+              },
+              {
+                "name": "Творог",
+                "value": "4"
+              }
+            ]
+          },
+          "addButton": {
+            "block": "button",
+            "label": "Добавить"
+          }
+        },
+        "items": [
+          {
+            "label": "Гречка",
+            "value": "0.00",
+            "name": "name1"
+          },
+          {
+            "label": "Хлеб",
+            "value": "0.00",
+            "name": "name2"
+          },
+          {
+            "label": "Сыр",
+            "value": "0.00",
+            "name": "name3"
+          },
+          {
+            "label": "Колбаса",
+            "value": "0.00",
+            "name": "name4"
+          }
+        ]
+      }
+    },
+    "schema": [
+      "accountId",
+      {
+        "block": "fieldset",
+        "label": "Имя",
+        "labelWidth": 3,
+        "items": [
+          "lastname",
+          "firstname",
+          "patronym"
+        ]
+      },
+      "address",
+      {
+        "name": "fieldset1",
+        "block": "fieldset",
+        "label": "Даты",
+        "labelWidth": 3,
+        "layout": [
+          {
+            "count": 2,
+            "width": [
+              4,
+              4
+            ]
+          }
+        ],
+        "items": [
+          "month",
+          "year"
+        ]
+      },
+      "typeAndSum"
+    ]
+  }
+}

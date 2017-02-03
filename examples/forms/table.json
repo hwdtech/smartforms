@@ -1,0 +1,111 @@
+{
+  "cls": "form",
+  "form": {
+    "test0": {
+      "block": "input",
+      "label": "test",
+      "disabled": true,
+      "placeholder": "test0"
+    },
+    "test1": {
+      "block": "input",
+      "placeholder": "test1"
+    },
+    "test2": {
+      "block": "input",
+      "placeholder": "test2"
+    },
+    "test3": {
+      "block": "input",
+      "placeholder": "test3"
+    },
+    "test4": {
+      "block": "input",
+      "placeholder": "test4"
+    },
+    "test5": {
+      "block": "input",
+      "placeholder": "test5"
+    },
+    "okButton": {
+      "block": "button",
+      "label": "OK",
+      "disabled": true,
+      "cls": "btn-primary"
+    },
+    "cancelButton": {
+      "block": "button",
+      "label": "Cancel"
+    },
+    "test00": {
+      "block": "input",
+      "label": "test",
+      "disabled": true,
+      "placeholder": "test0"
+    },
+    "test01": {
+      "block": "input",
+      "placeholder": "test1"
+    },
+    "test02": {
+      "block": "input",
+      "placeholder": "test2"
+    },
+    "test03": {
+      "block": "input",
+      "placeholder": "test3"
+    }
+  },
+  "schema": [
+    {
+      "name": "table",
+      "block": "table",
+      "label": "Table example",
+      "columnHeaders": [
+        "column 1",
+        "column 2"
+      ],
+      "layout": {
+        "columns": 2,
+        "width": [
+          3,
+          9
+        ]
+      },
+      "items": [
+        "test0",
+        "test1",
+        "test2",
+        "test3",
+        "test4",
+        "test5"
+      ]
+    },
+    {
+      "name": "table",
+      "block": "table",
+      "label": "Table without column headers example",
+      "layout": {
+        "columns": 2,
+        "width": [
+          5,
+          7
+        ]
+      },
+      "items": [
+        "test00",
+        "test01",
+        "test02",
+        "test03"
+      ]
+    },
+    {
+      "name": "actions",
+      "block": "actions",
+      "items": [
+        "okButton",
+        "cancelButton"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+extends ../base/base.jade
+
+block inner
+    each option in options
+        .radio(
+            class="#{_prefix}-radio #{cls}"
+        )
+            label(
+                id=containerOptions[option.value].id
+            )
+                input(
+                    type="radio"
+                    name=name
+                    checked=(option.checked && "checked")
+                    value=option.value
+                )
+                != option.name

@@ -1,0 +1,118 @@
+{
+  "cls": "form form-horizontal",
+  "form": {
+    "name": {
+      "block": "input",
+      "type": "text",
+      "name": "name",
+      "label": "Имя",
+      "labelWidth": 3,
+      "placeholder": "Введите имя",
+      "suppressLabel": true
+    },
+    "month": {
+      "block": "select",
+      "label": "месяц",
+      "labelWidth": 3,
+      "value": "11",
+      "values": [
+        {
+          "name": "Январь",
+          "value": "01"
+        },
+        {
+          "name": "Февраль",
+          "value": "02"
+        },
+        {
+          "name": "Март",
+          "value": "03"
+        },
+        {
+          "name": "Апрель",
+          "value": "04"
+        },
+        {
+          "name": "Май",
+          "value": "05"
+        },
+        {
+          "name": "Июнь",
+          "value": "06"
+        },
+        {
+          "name": "Июль",
+          "value": "07"
+        },
+        {
+          "name": "Август",
+          "value": "08"
+        },
+        {
+          "name": "Сентябрь",
+          "value": "09"
+        },
+        {
+          "name": "Октябрь",
+          "value": "10"
+        },
+        {
+          "name": "Ноябрь",
+          "value": "11"
+        },
+        {
+          "name": "Декабрь",
+          "value": "12"
+        }
+      ]
+    },
+    "test6": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test6"
+    },
+    "test7": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test7"
+    },
+    "test8": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test8"
+    },
+    "okButton": {
+      "block": "button",
+      "label": "OK",
+      "disabled": true,
+      "cls": "btn-primary"
+    },
+    "cancelButton": {
+      "block": "button",
+      "label": "Cancel"
+    }
+  },
+  "schema": [
+    "name",
+    "month",
+    {
+      "name": "fieldset1",
+      "block": "fieldset",
+      "label": "Fieldset without layout",
+      "labelWidth": 3,
+      "items": [
+        "test6",
+        "test7",
+        "test8"
+      ]
+    },
+    {
+      "name": "actions",
+      "block": "actions",
+      "items": [
+        "okButton",
+        "cancelButton"
+      ]
+    }
+  ]
+}

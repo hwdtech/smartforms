@@ -1,0 +1,188 @@
+{
+  "size": "sm",
+  "block": "modal",
+  "formHeader": "Регистрация",
+  "iagree": {
+    "htmlLabel": "Согласен на обработку персональных данных",
+    "checked": false,
+    "labelWidth": 0,
+    "container": "body"
+  },
+  "submitButton": {
+    "label": "Зарегистрироваться",
+    "labelWidth": 4,
+    "cls": "btn-default"
+  },
+  "body": {
+    "form": {
+      "email": {
+        "block": "input",
+        "placeholder": "email*",
+        "validationRules": [
+          {
+            "rule": "email",
+            "errorMessage": "Адрес электронной почты неверен"
+          }
+        ]
+      },
+      "пароль": {
+        "block": "input",
+        "type": "password",
+        "placeholder": "пароль*",
+        "validationRules": [
+          {
+            "rule": "обязательное && password",
+            "errorMessage": "Пароль должен содержать не менее 6 символов и содержать только латинские буквы, цифры и спецсимволы."
+          }
+        ]
+      },
+      "passwordConfirmation": {
+        "block": "input",
+        "type": "password",
+        "placeholder": "подтвердить пароль*",
+        "validationRules": [
+          {
+            "rule": "passwordConfirmation == пароль",
+            "errorMessage": "Пароли не совпадают."
+          }
+        ]
+      },
+      "lastname": {
+        "block": "input",
+        "placeholder": "фамилия*",
+        "validationRules": [
+          {
+            "rule": "обязательное && русский",
+            "errorMessage": "Пожалуйста, заполните поле на русском языке без дополнительных символов."
+          }
+        ]
+      },
+      "firstname": {
+        "block": "input",
+        "placeholder": "имя*",
+        "validationRules": [
+          {
+            "rule": "обязательное && русский",
+            "errorMessage": "Пожалуйста, заполните поле на русском языке без дополнительных символов."
+          }
+        ]
+      },
+      "patronym": {
+        "block": "input",
+        "placeholder": "отчество*",
+        "validationRules": [
+          {
+            "rule": "обязательное && русский",
+            "errorMessage": "Пожалуйста, заполните поле на русском языке без дополнительных символов."
+          }
+        ]
+      },
+      "dateOfBirth": {
+        "block": "date",
+        "placeholder": "дата рождения*",
+        "validationRules": [
+          {
+            "rule": "обязательное",
+            "errorMessage": "Дата рождения является обязательным полем и должна быть в формате ДД/ММ/ГГГГ"
+          }
+        ]
+      },
+      "address": {
+        "block": "address",
+        "minLength": 3,
+        "highlight": true,
+        "layout": [
+          1,
+          2,
+          1
+        ],
+        "url": "https://dadata.ru/api/v2/suggest/address/",
+        "items": {
+          "additional": {
+            "block": "input"
+          },
+          "apartment": {
+            "block": "input"
+          }
+        },
+        "settings": {
+          "type": "POST",
+          "dataType": "json",
+          "headers": {
+            "Authorization": "Token ffc44375a4d8268790b8aa1bc9d840aedd5aca40",
+            "Content-Type": "application/json"
+          },
+          "data": {
+            "count": 20,
+            "locations": [
+              "Омская"
+            ]
+          }
+        }
+      },
+      "phone": {
+        "block": "text",
+        "mask": "+7 999 999-99-99",
+        "maskPlaceholder": "_",
+        "placeholder": "+7 ___ ___-__-__"
+      },
+      "phoneComment": {
+        "block": "comment",
+        "text": "Укажите свой номер мобильного телефона, и Вам будут доступны функции sms-напоминания. Мы гарантируем сохранность введенных данных.",
+        "fontColor": "#96a7b7",
+        "fontSize": "12px"
+      },
+      "region": {
+        "block": "select",
+        "values": [
+          {
+            "name": "Республика Адыгея",
+            "value": "adyg_resp"
+          },
+          {
+            "name": "Республика Алтай",
+            "value": "altay_resp"
+          },
+          {
+            "name": "Омская область",
+            "value": "omsk_oblast",
+            "selected": true
+          }
+        ]
+      }
+    },
+    "schema": [
+      "email",
+      {
+        "block": "fieldset",
+        "items": [
+          "пароль",
+          "passwordConfirmation"
+        ],
+        "layout": [
+          1,
+          1
+        ]
+      },
+      {
+        "block": "fieldset",
+        "items": [
+          "lastname",
+          "firstname",
+          "patronym",
+          "dateOfBirth"
+        ],
+        "layout": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "region",
+      "address",
+      "phone",
+      "phoneComment"
+    ]
+  }
+}

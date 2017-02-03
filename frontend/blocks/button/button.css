@@ -1,0 +1,124 @@
+@import "../../styles/_variables.css";
+$box-shadow-color: #006aa4;
+$primary-background-color: #0a9acb;
+$default-color: #0a9acb;
+$default-hover-active-color: $red-danger;
+$default-inactive-color: #96a7b7;
+$disabled-text-color: rgba(255, 255, 255, 0.3);
+
+.$(cls-prefix)-button {
+  &.btn-primary {
+    background: $primary-background-color none;
+    border: 0;
+    color: #fff;
+    font-family: "PF Beau Sans Pro";
+    font-size: 16px;
+    font-weight: 700;
+    height: auto;
+    padding: 11px 28px 9px;
+    box-shadow: 0 3px 0 $box-shadow-color;
+
+    &:hover,
+    &:focus {
+      background-color: #0988b3;
+    }
+
+    &:active,
+    &.active {
+      background-color: #087da4;
+      box-shadow: 0 3px 0 $box-shadow-color, inset 0 2px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    &.btn-cancel {
+      background-color: #fff;
+      color: rgba(17, 17, 17, 0.5);
+      font-size: 17px;
+      font-weight: 400;
+      min-width: 0 !important;
+      box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+
+      &:hover,
+      &:focus {
+        background-color: #fff;
+        color: #111;
+      }
+
+      &:active,
+      &.active {
+        background-color: #fff;
+        color: #111;
+        box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1), inset 0 3px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &.inactive,
+    &[disabled] {
+      color: $disabled-text-color;
+      cursor: default;
+      opacity: 1;
+      text-shadow: none;
+
+      &:hover,
+      &:focus {
+        background-color: $primary-background-color;
+      }
+
+      &:active,
+      &.active {
+        background-color: $primary-background-color;
+        box-shadow: 0 3px 0 $box-shadow-color;
+      }
+    }
+  }
+
+  &.btn-default {
+    background: transparent none;
+    border-color: $default-color;
+    color: $default-color;
+    font-size: 15px;
+    font-weight: 700;
+    height: 42px;
+    padding: 7px 18px;
+    transition: all 0.15s ease-out;
+
+    &:focus {
+      background-color: transparent;
+      border-color: $default-color;
+      color: $default-color;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border-color: $default-hover-active-color;
+      color: $default-hover-active-color;
+    }
+
+    &:active,
+    &.active {
+      background-color: transparent;
+      border-color: $default-hover-active-color;
+      color: $default-hover-active-color;
+    }
+
+    &.btn-cancel {
+      border-color: #ccc;
+      color: #111;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        border-color: rgba(17, 17, 17, 0.5);
+      }
+    }
+
+    &.inactive,
+    &[disabled] {
+      border-color: $default-inactive-color;
+      cursor: default;
+      opacity: 0.65;
+      text-shadow: none;
+      color: $default-color;
+    }
+  }
+}

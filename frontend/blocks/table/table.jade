@@ -1,0 +1,10 @@
+extends ../container/container
+
+block container
+    div(class="#{_prefix}-table")
+        if columnHeaders
+            .row.table-header-row
+                each header, idx in columnHeaders
+                    span(class="col-xs-#{layout[0].width[idx]} table-header")= header
+        div(class="#{_prefix}-fieldset")
+            .fieldset-rows-container

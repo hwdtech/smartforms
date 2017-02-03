@@ -1,0 +1,13 @@
+extends ../base/base.jade
+
+block inner
+    each option in options
+        .radio
+            label
+                input(
+                    type="radio"
+                    name=name
+                    checked=(option.checked && "checked")
+                    value=option.value
+                )
+                span.radio-label= option.name

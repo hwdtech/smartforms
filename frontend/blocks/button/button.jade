@@ -1,0 +1,19 @@
+span(
+    class=[
+        labelWidth && "col-sm-#{12 - labelWidth} ",
+        labelWidth && "col-sm-offset-#{labelWidth}"
+    ]
+)
+    button.btn(
+        class=[
+            "#{_prefix}-button",
+            cls || "btn-default"
+        ]
+        type=type || "button"
+        disabled=disabled
+        id=id
+    )
+        if glyphicon
+            | <span class="glyphicon glyphicon-#{glyphicon}"></span> #{label}
+        else
+            = label

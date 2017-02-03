@@ -1,0 +1,8 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-modal-box-receipt-head {
+  .modal-inform-head {
+    padding-top: 0;
+    text-align: left;
+  }
+}

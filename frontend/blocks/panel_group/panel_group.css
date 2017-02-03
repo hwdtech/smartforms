@@ -1,0 +1,5 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-panel-group {
+  margin-bottom: 0;
+}

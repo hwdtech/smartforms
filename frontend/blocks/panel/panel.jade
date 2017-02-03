@@ -1,0 +1,42 @@
+div(class="#{_prefix}-form-box #{cls}")
+    .panel.panel-default
+        .panel-heading.clickable(
+            data-toggle='collapse'
+            href= "#collapse#{id}"
+            data-parent= parendId
+            role="tab"
+        )
+            .header-container
+                .header-image
+                    span
+                        img(src= imgUrl)
+                .header-title.clearfix
+                    .col-sm-10
+                        .title-info
+                            h4= title
+                            h5= subtitle
+                            span.panel-collapser
+                                | — 
+                                span= collapserShowMessage
+                    .col-sm-2
+                        .payment-label
+                            span= cost
+                            span!= rightMark
+        .panel-collapse.collapse(
+            id="collapse#{id}"
+            role="tabpanel"
+        )
+            .panel-body
+                .form-wrapper
+                    form
+                .form-controls
+                    hr
+                    form.form.form-horizontal(role='form')
+                        .form-group.form-group-submit.clearfix
+                            .col-sm-offset-3.col-sm-9
+                                span.form-submit
+                                    button.btn.btn-default.vp-form-control.save(type='button') Сохранить изменения
+                                span.form-delete
+                                    a.link-delete.vp-form-control.delete(href='#')
+                                        i.icon-delete
+                                        span Удалить платёж

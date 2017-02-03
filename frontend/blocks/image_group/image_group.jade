@@ -1,0 +1,9 @@
+.image-group(class="#{_prefix}-image-group #{cls}")
+    .image-group-label= label
+    .image-container.clearfix
+        each image in images
+            .image(class=image.selected === undefined ? '' : 'selected')
+                a.image-link(href='#', data-source-type-active=image.selected === undefined ? 'false' : 'true', data-source-type=image.sourceType)
+                    .picture
+                        p
+                            img(src=image.url)

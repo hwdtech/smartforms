@@ -1,0 +1,10 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-form-group {
+  label.container-label {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+}

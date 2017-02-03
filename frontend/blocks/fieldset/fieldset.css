@@ -1,0 +1,153 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-fieldset {
+  .form-control,
+  .jq-selectbox .jq-selectbox__select {
+    border-radius: 0;
+  }
+
+  .input-set-col {
+    display: table-cell;
+    padding: 0;
+    position: relative;
+
+    .form-group {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .control-label {
+      background-color: #fff;
+      border: 1px solid $border-clr;
+      color: #919191;
+      display: block;
+      font-size: 15px;
+      font-weight: 400;
+      height: 42px;
+      margin: 0;
+      padding: 11px 12px 0;
+      overflow: auto;
+
+      &.font-size-small {
+        width: 100%;
+        border-collapse: separate;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 0;
+
+        span {
+          display: table-cell;
+          padding: 3px 12px 0;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .form-refresh-link {
+      right: 14px;
+    }
+
+    + .input-set-col {
+      .form-control,
+      .jq-selectbox .jq-selectbox__select {
+        border-left: 0;
+      }
+    }
+  }
+
+  @media (--tablet) {
+    .input-set-col .control-label {
+      display: block;
+
+      &.font-size-small {
+        display: table;
+      }
+    }
+  }
+
+  .input-set-row {
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: -15px;
+    }
+
+    + .input-set-row {
+      .form-control,
+      .control-label,
+      .jq-selectbox .jq-selectbox__select {
+        border-top: 0;
+      }
+    }
+
+    &:first-child .input-set-col {
+      &:first-child {
+        .form-control,
+        .control-label,
+        .jq-selectbox .jq-selectbox__select {
+          border-top-left-radius: 3px;
+        }
+      }
+
+      &:last-child {
+        .form-control,
+        .control-label,
+        .jq-selectbox .jq-selectbox__select {
+          border-top-right-radius: 3px;
+        }
+
+        .date {
+          .input-group-addon {
+            border-bottom-right-radius: 0;
+          }
+
+          .form-control {
+            border-top-right-radius: 0;
+          }
+        }
+      }
+    }
+
+    &:last-child .input-set-col {
+      &:first-child {
+        .form-control,
+        .control-label,
+        .jq-selectbox .jq-selectbox__select {
+          border-bottom-left-radius: 3px;
+        }
+      }
+
+      &:last-child {
+        .form-control,
+        .control-label,
+        .jq-selectbox .jq-selectbox__select {
+          border-bottom-right-radius: 3px;
+        }
+
+        .date {
+          .input-group-addon {
+            border-top: 0;
+            border-top-right-radius: 0;
+          }
+
+          .form-control {
+            border-bottom-right-radius: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .input-set-compressed {
+    padding-right: 40px;
+    position: relative;
+
+    .sign-ruble {
+      position: absolute;
+      right: -21px;
+      top: 8px;
+    }
+  }
+}

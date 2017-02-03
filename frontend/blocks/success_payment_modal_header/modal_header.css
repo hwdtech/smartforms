@@ -1,0 +1,81 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-information-modal {
+  .modal-success-payment .modal-inform-head.modal-topic {
+    margin-bottom: 5px;
+    padding-top: 108px;
+    position: relative;
+  }
+
+  .modal-success-payment .modal-topic::before {
+    margin-left: -30px;
+    font-size: 60px;
+  }
+
+  .modal-success-payment .modal-inform-head::before {
+    background-image: inline("big_ok.png");
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    top: 40px;
+  }
+
+  .modal-inform-success .modal-inform-head::before {
+    color: #35b338;
+    font-size: 60px;
+    margin-left: -30px;
+  }
+
+  .modal-inform-head::before {
+    font-family: "WebSymbolsLigaRegular";
+    left: 50%;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+  }
+
+  .modal-success-payment .modal-inform-head.modal-topic h2 {
+    font-size: 28px;
+    font-family: "PF Beau Sans Pro";
+    font-weight: bold;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+  }
+
+  .modal-inform-head h2 {
+    margin: 0;
+  }
+
+  h2,
+  .h2 {
+    color: #4b5c70;
+  }
+
+  .modal-success-payment .vp-ab-test-receipt {
+    margin-bottom: 33px;
+    font-size: 17px;
+    line-height: 2.059;
+    text-align: center;
+    padding-right: 12px;
+  }
+
+  .modal-success-payment .kvitanciya-img {
+    margin-right: 3px;
+  }
+
+  img {
+    vertical-align: middle;
+    border: 0;
+  }
+
+  .modal-success-payment .vp-ab-test-receipt a {
+    border-bottom: 2px solid #b5e1ef;
+  }
+
+  a {
+    color: #0a9acb;
+    text-decoration: none;
+    transition: all 0.15s ease-out;
+  }
+}

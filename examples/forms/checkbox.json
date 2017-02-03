@@ -1,0 +1,14 @@
+{
+  "cls": "form form-horizontal",
+  "form": {
+    "iagree": {
+      "block": "checkbox",
+      "name": "iagree",
+      "checked": true,
+      "htmlLabel": "Я согласен"
+    }
+  },
+  "schema": [
+    "iagree"
+  ]
+}

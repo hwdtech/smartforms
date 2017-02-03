@@ -1,0 +1,12 @@
+div(class="#{_prefix}-modal-box-success-body")
+    .modal-box-success-body
+        .vp-ab-test-motivation
+            p=title
+        .vp-ab-test-icons
+            each item in items
+                .g-col-xs-4
+                    a(href=item.link)
+                        img(src=item.imageUrl)
+                    .categories-name=item.title
+        .modal-inform-foot
+            button.btn.btn-primary.go-to-url(type='button', data-url='/payments/popular#providers')=buttonName

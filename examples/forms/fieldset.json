@@ -1,0 +1,105 @@
+{
+  "cls": "form",
+  "form": {
+    "test0": {
+      "block": "input",
+      "label": "test",
+      "disabled": true,
+      "placeholder": "test0"
+    },
+    "test1": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test1"
+    },
+    "test2": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test2"
+    },
+    "test3": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test3"
+    },
+    "test4": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test4"
+    },
+    "test5": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test5"
+    },
+    "test6": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test6"
+    },
+    "test7": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test7"
+    },
+    "test8": {
+      "block": "input",
+      "disabled": false,
+      "placeholder": "test8"
+    },
+    "okButton": {
+      "block": "button",
+      "label": "OK",
+      "disabled": true,
+      "cls": "btn-primary"
+    },
+    "cancelButton": {
+      "block": "button",
+      "label": "Cancel"
+    }
+  },
+  "schema": [
+    {
+      "name": "fieldset0",
+      "block": "fieldset",
+      "label": "Fieldset with layout",
+      "layout": [
+        1,
+        {
+          "count": 2,
+          "width": [
+            3,
+            9
+          ]
+        },
+        3
+      ],
+      "items": [
+        "test0",
+        "test1",
+        "test2",
+        "test3",
+        "test4",
+        "test5"
+      ]
+    },
+    {
+      "name": "fieldset1",
+      "block": "fieldset",
+      "label": "Fieldset without layout",
+      "items": [
+        "test6",
+        "test7",
+        "test8"
+      ]
+    },
+    {
+      "name": "actions",
+      "block": "actions",
+      "items": [
+        "okButton",
+        "cancelButton"
+      ]
+    }
+  ]
+}

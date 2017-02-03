@@ -1,0 +1,105 @@
+@import "../../styles/_variables.css";
+$hover-close-button-clr: #252525;
+
+.$(cls-prefix)-receipt-modal {
+  .modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .fade.in {
+    opacity: 1;
+  }
+
+  .modal-receipt {
+    z-index: 1060;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: 0;
+
+    @media (--desktop) {
+      margin-top: 75px;
+    }
+  }
+
+  .fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+  }
+
+  .modal.in .modal-dialog {
+    transform: translate(0, 0);
+  }
+
+  .modal.fade .modal-dialog {
+    transform: translate(0, -25%);
+    transition: transform 0.3s ease-out;
+  }
+
+  .modal-dialog {
+    @media (--tablet) {
+      width: 744px;
+    }
+
+    @media (--desktop) {
+      margin: 275px auto 40px;
+    }
+
+    z-index: 1;
+    position: relative;
+    width: auto;
+    margin: 275px 10px 40px;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    box-sizing: border-box;
+  }
+
+  .modal-body {
+    position: relative;
+    padding: 0;
+    text-align: center;
+
+    @media (--tablet) {
+      padding: 50px 30px 30px;
+    }
+  }
+
+  button.close {
+    background-color: rgba(48, 59, 79, 0.1);
+    border-top-right-radius: 4px;
+    height: 30px;
+    margin: 0;
+    opacity: 1;
+    position: absolute;
+    padding: 5px;
+    right: 0;
+    top: 0;
+    width: 30px;
+    z-index: 5;
+    font-size: 14px;
+    transition: all 0.15s ease-out;
+
+    &:hover {
+      background-color: rgba(48, 59, 79, 0.2);
+      opacity: 1;
+      color: $hover-close-button-clr;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

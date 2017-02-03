@@ -1,0 +1,36 @@
+{
+  "cls": "form",
+  "form": {
+    "textField": {
+      "block": "text",
+      "name": "accountNumber",
+      "label": "Текстовое поле с двумя правилами",
+      "textAlign": "center",
+      "value": "1234 9999999",
+      "mask": "9999 9999999",
+      "maskPlaceholder": "_",
+      "validationRules": [
+        {
+          "rule": "обязательное",
+          "errorMessage": "Поле должно быть заполнено"
+        },
+        {
+          "rule": "длина > 5",
+          "errorMessage": "Длина поля должна быть больше 5"
+        }
+      ]
+    },
+    "textField1": {
+      "block": "text",
+      "textAlign": "center",
+      "label": "Текстовое поле с двойным правилом",
+      "value": "1234 9999999",
+      "validationRules": [
+        {
+          "rule": "обязательное && длина > 5",
+          "errorMessage": "Поле должно быть заполнено, длина поля должна быть больше 5"
+        }
+      ]
+    }
+  }
+}

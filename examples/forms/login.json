@@ -1,0 +1,62 @@
+{
+  "size": "sm",
+  "block": "modal",
+  "formHeader": "Вход",
+  "formHeaderNewFormLink": {
+    "formUrl": "http://localhost:3000/static/examples/forms/registration.json",
+    "text": "Регистрация",
+    "href": "#"
+  },
+  "submitButton": {
+    "label": "Войти",
+    "labelWidth": 8,
+    "cls": "btn-default",
+    "container": "body"
+  },
+  "body": {
+    "form": {
+      "email": {
+        "block": "input",
+        "placeholder": "электронная почта",
+        "validationRules": [
+          {
+            "rule": "email",
+            "errorMessage": "Такой почтовый адрес не зарегистрирован, либо пароль неверный. Если Вы уверены, что регистрировались на нашем сайте, но не помните пароль, то попробуйте его восстановить ниже по форме. Просто введите свой электронный адрес, и Вам на электронную почту придет ссылка. Пройдя по ссылке, Вы сможете ввести новый удобный для Вас пароль.",
+            "isGlobalError": true
+          }
+        ]
+      },
+      "пароль": {
+        "block": "input",
+        "type": "password",
+        "placeholder": "пароль",
+        "newFormLink": {
+          "formUrl": "http://localhost:3000/static/examples/forms/forgot_password.json",
+          "text": "Напомнить",
+          "href": "#"
+        },
+        "validationRules": [
+          {
+            "rule": "обязательное && password",
+            "errorMessage": "Такой почтовый адрес не зарегистрирован, либо пароль неверный. Если Вы уверены, что регистрировались на нашем сайте, но не помните пароль, то попробуйте его восстановить ниже по форме. Просто введите свой электронный адрес, и Вам на электронную почту придет ссылка. Пройдя по ссылке, Вы сможете ввести новый удобный для Вас пароль.",
+            "isGlobalError": true
+          }
+        ]
+      }
+    },
+    "schema": [
+      {
+        "block": "fieldset",
+        "validateOnlyFirstField": true,
+        "items": [
+          "email",
+          "пароль"
+        ],
+        "layout": [
+          1,
+          1
+        ]
+      }
+    ]
+  }
+}

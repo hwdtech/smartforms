@@ -1,0 +1,84 @@
+{
+  "cls": "form",
+  "form": {
+    "typeAndSum": {
+      "block": "array",
+      "columnHeaders": ["Прибор учета", "Текущие показания"],
+      "name": "typeAndSum",
+      "itemLabel": "Чек",
+      "maxLength": 6,
+      "helpMessage": "Список сумм к оплате может иметь максимум 6 видов платежа.",
+      "errorMessage": "Неверно указана услуга",
+      "labelRightMark": "'<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"></span>'",
+      "defaultValueForNewItem": "0.00",
+      "newItemInputTextAlign": "right",
+      "comment": {
+        "block": "comment",
+        "text": "Если поля вашей квитанции отличаются от представленных на экране, добавьте услугу, предварительно удалив ненужную. Максимальное количество полей - 6.",
+        "fontColor": "#252525",
+        "fontSize": "86%"
+      },
+      "actions": {
+        "label": {
+          "block": "label",
+          "labelText": "Добавить услугу"
+        },
+        "select": {
+          "block": "select",
+          "name": "service",
+          "values": [
+            {
+              "name": "-- выберите услугу --",
+              "value": ""
+            },
+            {
+              "name": "Печенье",
+              "value": "1"
+            },
+            {
+              "name": "Конфеты",
+              "value": "2"
+            },
+            {
+              "name": "Сок",
+              "value": "3"
+            },
+            {
+              "name": "Творог",
+              "value": "4"
+            }
+          ]
+        },
+        "addButton": {
+          "block": "button",
+          "label": "Добавить"
+        }
+      },
+      "items": [
+        {
+          "label": "Гречка",
+          "value": "0.00",
+          "name": "name1"
+        },
+        {
+          "label": "Хлеб",
+          "value": "0.00",
+          "name": "name2"
+        },
+        {
+          "label": "Сыр",
+          "value": "0.00",
+          "name": "name3"
+        },
+        {
+          "label": "Колбаса",
+          "value": "0.00",
+          "name": "name4"
+        }
+      ]
+    }
+  },
+  "schema": [
+    "typeAndSum"
+  ]
+}

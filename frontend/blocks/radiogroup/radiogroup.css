@@ -1,0 +1,50 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-form-group {
+  .radio {
+    label {
+      position: relative;
+      padding-left: 0;
+    }
+
+    .jq-radio {
+      background-color: #fff;
+      border: 1px solid #d7d7d7;
+      cursor: pointer;
+      height: 19px;
+      margin-right: 8px;
+      vertical-align: middle;
+      width: 19px;
+      border-radius: 50%;
+      transition: all 0.1s ease-out;
+
+      &.focused {
+        border-color: #0a9acb;
+      }
+
+      &.disabled {
+        opacity: 0.55;
+        filter: alpha(opacity=55);
+      }
+
+      &.checked {
+        background-color: #0a9acb;
+        border-color: #0a9acb;
+
+        .jq-radio__div {
+          transform: scale(1);
+        }
+      }
+
+      .jq-radio__div {
+        transition: all 0.3s linear;
+        background: #fff;
+        border-radius: 50%;
+        height: 9px;
+        margin: 4px 0 0 4px;
+        width: 9px;
+        transform: scale(1.6);
+      }
+    }
+  }
+}

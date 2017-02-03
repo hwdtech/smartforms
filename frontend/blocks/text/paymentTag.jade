@@ -1,0 +1,14 @@
+extends ../base/base.jade
+
+block inner
+    input.form-control(
+        id=id
+        type='text'
+        class=cls
+        name=name
+        value=value
+        disabled=disabled
+        placeholder=placeholder
+        data-role='tagsinput'
+        style=(inputWidth ? "width:#{inputWidth}" : undefined)
+    )

@@ -1,0 +1,129 @@
+@import "../../styles/_variables.css";
+
+li.$(cls-prefix)-check-group-list-item.item {
+  border-bottom: 1px solid #e1e1e1;
+  margin: 0 -10px 20px;
+  padding: 0 10px 20px;
+  position: relative;
+
+  .item-head {
+    font-size: 19px;
+    line-height: 25px;
+    margin-bottom: 7px;
+
+    .item-title {
+      float: left;
+
+      label {
+        cursor: pointer;
+        display: inline;
+        font-weight: 400;
+        margin-bottom: 0;
+        max-width: 100%;
+      }
+
+      .jq-checkbox {
+        margin-right: 6px;
+
+        .jq-checkbox__div {
+          transition: all 0.3s linear;
+          background: inline("checkbox_background.png") no-repeat;
+          height: 14px;
+          margin: 1px 0 0 1px;
+          width: 0;
+        }
+      }
+
+      .jq-checkbox.checked {
+        background-color: #0a9acb;
+        border-color: #0a9acb;
+
+        .jq-checkbox__div {
+          width: 14px;
+        }
+      }
+
+      .jq-checkbox {
+        border-radius: 2px;
+      }
+
+      .jq-checkbox {
+        background-color: #fff;
+        border: 1px solid $border-clr;
+        cursor: pointer;
+        height: 19px;
+        left: 0;
+        top: -2px;
+        vertical-align: middle;
+        width: 19px;
+        transition: all 0.1s ease-out;
+      }
+
+      .link-delete {
+        display: inline-block;
+        height: 16px;
+        margin-left: 10px;
+        opacity: 0.5;
+        padding-left: 15px;
+        top: 1px;
+        border-bottom: 0;
+        color: #e01f2b;
+        position: relative;
+        text-decoration: none;
+        transition: all 0.15s ease-out 0s;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        .icon-delete {
+          top: 0;
+          background: inline("icon_delete.png") no-repeat -30px 0;
+          height: 16px;
+          left: 0;
+          position: absolute;
+          width: 15px;
+        }
+      }
+    }
+
+    .item-price {
+      float: right;
+    }
+
+    .ruble {
+      float: right;
+      font-size: 11px;
+      top: 6px;
+    }
+  }
+
+  .item-status {
+    color: #96a7b7;
+    margin-bottom: 3px;
+  }
+
+  .item-body {
+    font-size: 13px;
+
+    p {
+      margin: 0 0 5px;
+    }
+  }
+
+  .item-foot {
+    position: relative;
+
+    .link-edit {
+      bottom: -8px;
+      font-size: 13px;
+      line-height: 17px;
+      position: absolute;
+      right: 0;
+      border-bottom: 1px dashed #b5e1ef;
+      color: #0a9acb;
+      text-decoration: none;
+      transition: all 0.15s ease-out 0s;
+    }
+  }
+}

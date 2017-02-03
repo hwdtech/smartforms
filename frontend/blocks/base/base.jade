@@ -1,0 +1,19 @@
+.form-group(class="#{_prefix}-form-group error-#{name} #{cls} clearfix" +
+    (required ? " required" : "") +
+    (readOnly ? " readonly" : "") +
+    (disabled ? " disabled" : "") +
+    (hidden ? " hidden" : ""))
+
+    if showLabel
+        label.base-label.control-label(for=id, class=(labelWidth && "col-sm-#{labelWidth}"))= label
+
+    .controls(class=(labelWidth && "col-sm-#{12 - labelWidth} ") + (labelWidth && !showLabel && "col-sm-offset-#{labelWidth}"))
+        block inner
+
+        if helpMessage && helpMessage.text
+            p.help-block(
+                style="color: #{helpMessage.fontColor}; font-size: #{helpMessage.fontSize}px;"
+            ) !{helpMessage.text}
+
+        span.help-block.errortext(style="display:none;")
+

@@ -1,0 +1,110 @@
+@import "../../styles/_variables.css";
+$checked-clr: #0a9acb;
+$focus-clr: #0a9acb;
+$unchecked-clr: #fff;
+
+.$(cls-prefix)-form-group .$(cls-prefix)-checkbox {
+  margin-top: -20px;
+
+  .text-wrapper {
+    text-align: left;
+
+    .popover-icon {
+      cursor: pointer;
+      transition: all 0.15s ease-out;
+      background: inline("icon_info.png") no-repeat;
+      border-bottom: 0;
+      display: inline-block;
+      height: 19px;
+      margin-left: 8px;
+      opacity: 0.5;
+      vertical-align: -5px;
+      width: 19px;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .popover-icon:focus {
+      opacity: 1;
+      outline: none;
+    }
+
+    .popover-content {
+      color: #4b5c70;
+    }
+  }
+
+  .checkbox {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.534;
+    padding-top: 13px;
+
+    label {
+      min-height: 19px;
+      padding-left: 30px;
+      margin-bottom: 0;
+      font-weight: normal;
+      cursor: pointer;
+      position: relative;
+    }
+  }
+
+  .checkbox-wrapper {
+    padding-left: 5px;
+    padding-bottom: 15px;
+    display: inline-block;
+    float: left;
+
+    .checkbox-label {
+      text-align: start;
+    }
+  }
+
+  .jq-checkbox {
+    background-color: $unchecked-clr;
+    border: 1px solid $border-clr;
+    cursor: pointer;
+    height: 19px;
+    left: 0;
+    top: -2px;
+    vertical-align: middle;
+    width: 19px;
+    transition: all 0.1s ease-out;
+    border-radius: 2px;
+
+    &.focused {
+      border-color: $focus-clr;
+    }
+
+    &.disabled {
+      opacity: 0.55;
+      filter: alpha(opacity=55);
+    }
+
+    &.checked {
+      background-color: $checked-clr;
+      border-color: $checked-clr;
+    }
+
+    .jq-checkbox__div {
+      transition: all 0.3s linear;
+      background: inline("checkbox_background.png") no-repeat;
+      height: 14px;
+      margin: 1px 0 0 1px;
+      width: 0;
+    }
+
+    &.checked .jq-checkbox__div {
+      width: 14px;
+    }
+  }
+
+  .checkbox .jq-checkbox {
+    position: absolute !important;
+    top: 0;
+  }
+}

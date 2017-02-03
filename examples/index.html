@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+
+  <title>Welcome to smartforms</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <!-- Our library css -->
+  <link rel="stylesheet" type="text/css" href="/smartforms.css"/>
+</head>
+<body>
+  <div class="container">
+    <p>Welcome to smartforms</p>
+
+    List of examples:
+    <select class="select-example">
+      <option value="basic" selected="selected">Basic</option>
+      <option value="fieldset">Fieldset</option>
+      <option value="select">Select</option>
+      <option value="checkbox">Checkbox</option>
+      <option value="text">Text field</option>
+      <option value="static">Static text field</option>
+      <option value="labels_on_the_left">Labels on the left</option>
+      <option value="array">Array</option>
+      <option value="address">Address</option>
+      <option value="radiogroup">Radiogroup</option>
+      <option value="table">Table</option>
+      <option value="radiogroup_with_container">Radiogroup with container</option>
+    </select>
+
+    <div class="form-container">
+      <div class="well" style="margin: 20px;">
+        <form class="smartform"></form>
+      </div>
+    </div>
+
+    <table id="providers">
+      <thead>
+      <tr>
+        <th>Примеры</th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+  </div>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Our library js-->
+  <script type="text/javascript" src="/smartforms.js"></script>
+  <!-- Converter js-->
+  <script type="text/javascript" src="combine_schema_with_form.js"></script>
+  <!-- Example -->
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

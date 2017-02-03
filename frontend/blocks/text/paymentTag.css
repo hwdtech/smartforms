@@ -1,0 +1,165 @@
+.bootstrap-tagsinput {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  cursor: text;
+  display: block;
+  font-size: 17px;
+  line-height: normal;
+  min-height: 43px;
+  padding: 5px 5px 1px;
+  vertical-align: middle;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  .tag {
+    border: 1px solid #d7dce1;
+    border-color: rgba(150, 167, 183, 0.3);
+    border-radius: 3px;
+    color: #4b5c70;
+    cursor: default;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    max-width: 100%;
+    padding: 9px 26px 8px 12px;
+    position: relative;
+    text-transform: uppercase;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100% !important;
+    background-color: inherit !important;
+    text-align: left;
+
+    [data-role="remove"] {
+      color: #96a7b7;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 400;
+      height: 17px;
+      margin-top: -9px;
+      position: absolute;
+      text-align: center;
+      right: 9px;
+      top: 50%;
+      width: 13px;
+    }
+
+    [data-role="remove"]::after {
+      content: "\00D7";
+    }
+  }
+
+  .label-info + .twitter-typeahead {
+    display: none !important;
+  }
+
+  .twitter-typeahead {
+    display: inline-block !important;
+  }
+
+  .label-info,
+  .twitter-typeahead {
+    width: 100% !important;
+  }
+
+  input {
+    min-width: 100% !important;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    max-width: inherit;
+    outline: none;
+    padding: 5px;
+    vertical-align: top;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    top: 0;
+  }
+
+  pre {
+    top: 0;
+  }
+}
+
+.tt-dropdown-menu {
+  margin-top: 8px;
+  right: 0 !important;
+}
+
+.tt-suggestion {
+  color: #4b5c70;
+  cursor: pointer;
+  padding: 12px 18px 12px 67px;
+  position: relative;
+}
+
+.tt-suggestion p {
+  line-height: 1.667;
+  margin: 0;
+}
+
+.tt-suggestion.tt-cursor {
+  background-color: #f4f6f8;
+}
+
+.tt-suggestion .tt-icon {
+  background-color: #fff;
+  display: table;
+  height: 35px;
+  left: 18px;
+  position: absolute;
+  top: 7px;
+  width: 35px;
+}
+
+.tt-suggestion .tt-icon span {
+  display: table-cell;
+  height: 100%;
+  padding: 3px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tt-suggestion .tt-icon img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.tt-suggestion .tt-name {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tt-dataset-cities .tt-suggestion {
+  padding-left: 18px;
+}
+
+.tt-hint {
+  color: #b3b3b3;
+}
+
+.tt-dataset-labels :first-child {
+  width: 100%;
+}
+
+.tt-menu.tt-open {
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  overflow: auto;
+  padding: 8px 0;
+  width: 100%;
+  box-shadow: 0 40px 48px rgba(0, 0, 0, 0.15);
+  margin-top: 8px;
+  right: 0 !important;
+}

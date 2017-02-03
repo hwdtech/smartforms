@@ -1,0 +1,117 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-information-modal {
+  .modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .fade.in {
+    opacity: 1;
+  }
+
+  .modal-inform {
+    z-index: 1060;
+  }
+
+  @media (--desktop) {
+    .modal {
+      margin-top: 75px;
+    }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: 0;
+  }
+
+  .fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+  }
+
+  .modal.in .modal-dialog {
+    transform: translate(0, 0);
+  }
+
+  .modal.fade .modal-dialog {
+    transform: translate(0, -25%);
+    transition: transform 0.3s ease-out;
+  }
+
+  @media (--tablet) {
+    .modal-success-payment .modal-dialog {
+      width: 454px;
+    }
+  }
+
+  .modal-dialog {
+    @media (--desktop) {
+      margin: 178px auto 40px;
+    }
+
+    @media (--tablet) {
+      width: 600px;
+      margin: 178px auto;
+    }
+
+    z-index: 1;
+    position: relative;
+    width: auto;
+    margin: 178px 10px 0;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    box-sizing: border-box;
+  }
+
+  .modal-body {
+    position: relative;
+    padding: 0;
+    text-align: center;
+  }
+
+  .modal-inform .close,
+  .modal-inform button.close {
+    background-color: transparent;
+    color: #96a7b7;
+    right: 3px;
+    top: 3px;
+  }
+
+  .close,
+  button.close {
+    border-top-right-radius: 4px;
+    font-size: 25px;
+    height: 30px;
+    margin: 0;
+    position: absolute;
+    width: 30px;
+    z-index: 5;
+    opacity: 1;
+    transition: all 0.15s ease-out;
+  }
+
+  button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+
+  .close {
+    float: right;
+    font-weight: 400;
+    line-height: 1;
+    text-shadow: none;
+  }
+}

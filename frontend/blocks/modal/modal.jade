@@ -1,0 +1,53 @@
+mixin buttonClose
+    button.close(
+        type="button"
+        data-dismiss="modal"
+        aria-label="Close"
+    )
+        i.glyphicon.glyphicon-remove
+
+.modal.fade(
+    class="#{_prefix}-modal"
+    tabindex=-1
+    role="dialog"
+)
+    .modal-dialog(
+        role="document"
+        class="modal-#{size || 'md'}"
+    )
+        .modal-content
+            if protectedConnection
+                .protected-connection
+                    span.protected-connection-text(style="color:#{protectedConnection.color}")
+                        img.protected-connection-logo(src=protectedConnection.imgUrl)
+                        = protectedConnection.text
+            if title
+                .modal-header
+                    +buttonClose
+
+                    .header-wrap(class=imgUrl ? "" : "without-image")
+                        if imgUrl
+                            .header-image
+                                span
+                                    img(src=imgUrl)
+
+                        .header-title
+                            h4.title= title
+                            h5.subtitle= subtitle
+
+            .modal-body(class=isPanelGroup ? "with-panel-group" : "")
+                if !title
+                    +buttonClose
+            if help
+                .modal-help
+                    a.g-link-dashed(
+                        data-toggle="modal"
+                        data-target="#help_modal_#{id}"
+                    )= help.message
+
+            if footer.length
+                .modal-footer
+                    if bonusNotification
+                        .bonus-notification-container.col-sm-9.col-sm-offset-3
+                            img(src=bonusNotification.imgUrl)
+                            a.bonus-notification(class=bonusNotificationId, tabindex=0)= bonusNotification.text

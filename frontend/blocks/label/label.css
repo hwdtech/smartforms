@@ -1,0 +1,7 @@
+@import "../../styles/_variables.css";
+
+.$(cls-prefix)-label {
+  font-weight: 400;
+  font-size: 17px;
+  padding: 0;
+}

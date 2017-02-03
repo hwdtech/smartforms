@@ -1,0 +1,15 @@
+{
+  "cls": "form",
+  "form": {
+    "sum": {
+      "block": "static",
+      "name": "sum",
+      "label": "Сумма",
+      "value": 563,
+      "rightMark": "<span class=\"glyphicon glyphicon-ruble\" aria-hidden=\"true\" style=\"font-size: 11px\"><\/span>"
+    }
+  },
+  "schema": [
+    "sum"
+  ]
+}
