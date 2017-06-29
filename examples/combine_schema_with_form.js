@@ -1,6 +1,6 @@
 var combiner = {
   getForm(schemaJson, formJson, globalConfig) {
-    const schema = schemaJson;
+    const schema = JSON.parse(JSON.stringify(schemaJson));
     const form = JSON.parse(JSON.stringify(formJson));// Optimize
     const allowedIndividualElements = [
       'штрихкод',
@@ -50,6 +50,7 @@ var combiner = {
       if (itemDescription.type === 'text') { createCustomTextTable(element); }
       if (itemDescription.type === 'array') { createCustomArrayTable(element); }
       if (itemDescription.type === 'emptyTable') { deleteItemFromSchema(element); }
+      if (itemDescription.type === 'selectWithValue') { createCustomSelectWithValueTable(element); }
     }
 
     function calculateSimpleElement(element) {
@@ -213,10 +214,26 @@ var combiner = {
         element.layout.push(layout);
       }
     }
+
+    function createCustomSelectWithValueTable(element) {
+      var elementName = element.name;
+      var selectElement = form.body.form[elementName];
+      var value;
+      var name;
+      element.values.forEach(function(item) {
+        name = item.name;
+        value = item.value;
+        selectElement.values.push({name: name, value: value});
+      });
+      var activeElement = element.values.filter(function(item) {
+        return item.isActive === true;
+      });
+      selectElement.value = activeElement[0].значение;
+    }
   },
 
   getSchema(schemaJson, formData) {
-    const schema = schemaJson;
+    const schema = JSON.parse(JSON.stringify(schemaJson));
     const form = formData;
 
     const markTags = [
