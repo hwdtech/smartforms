@@ -216,16 +216,16 @@ var combiner = {
     }
 
     function createCustomSelectWithValueTable(element) {
-      var elementName = element.name;
-      var selectElement = form.body.form[elementName];
-      var value;
-      var name;
-      element.values.forEach(function(item) {
+      const elementName = element.name;
+      const selectElement = form.body.form[elementName];
+      let value;
+      let name;
+      element.values.forEach(item => {
         name = item.name;
         value = item.value;
         selectElement.values.push({name: name, value: value});
       });
-      var activeElement = element.values.filter(function(item) {
+      const activeElement = element.values.filter(item => {
         return item.isActive === true;
       });
       selectElement.value = activeElement[0].значение;
