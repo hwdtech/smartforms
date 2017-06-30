@@ -1,0 +1,16 @@
+{
+  "body": {
+    "form": {
+      "расчетныйсчет": {
+        "block": "selectWithValue",
+        "name": "расчетныйсчет",
+        "label": "Расчетный счет",
+        "labelWidth": 3,
+        "values": []
+      }
+    },
+    "schema": [
+      "расчетныйсчет"
+      ]
+  }
+}

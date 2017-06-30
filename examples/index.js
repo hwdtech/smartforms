@@ -39,6 +39,14 @@ $(() => {
     $providersContainer.append(providerTemplate(provider));
   });
 
+  const $providersWithSchemaContainer = $('#providersWithSchema tbody');
+
+  [
+    { path: 'select_with_value_in_schema.json', name: 'Select с name и value' }
+  ].forEach(provider => {
+    $providersWithSchemaContainer.append(providerTemplate(provider));
+  });
+
   $providersContainer.on('click', '.receipt-modal-initial-button a', function (e) {
     e.preventDefault();
 
@@ -74,6 +82,27 @@ $(() => {
     $.get($provider.data('jsonPath'), data => {
       window.modal = smartforms.createModal($provider.find('.modal-column .modal'), data, $globalConfig);
       $provider.find('.modal-column .modal').modal('show');
+    });
+  });
+
+  $providersWithSchemaContainer.on('click', '.modal-initial-button a', function (e) {
+    e.preventDefault();
+
+    const $provider = $(this.closest('tr.provider'));
+    const $providerPath = $provider.data('jsonPath');
+
+    $.get('forms/' + $providerPath, data => {
+      $.get('forms/schemas/' + $providerPath, providerSchema => {
+
+        var readyForm = combiner.getForm(providerSchema, data, $globalConfig);
+        window.modal = smartforms.createModal($provider.find('.modal-column .modal'), readyForm, $globalConfig);
+        $provider.find('.modal-column .modal').modal('show');
+        window.modal.on('afterSubmit', function(e, isValid, form) {
+          console.log('Заполненная форма');
+          console.log(form);
+          combiner.getSchema(providerSchema, form);
+        });
+      });
     });
   });
 });

@@ -8,7 +8,7 @@ import template from './select.jade';
 import Base from '../base/base';
 import Factory from '../factory';
 
-export default class Select extends Base {
+export default class SelectWithValue extends Base {
   get templateFn() {
     return template;
   }
@@ -85,4 +85,4 @@ export default class Select extends Base {
   }
 }
 
-Factory.register('select', Select);
+Factory.register('selectWithValue', SelectWithValue);
