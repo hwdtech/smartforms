@@ -218,8 +218,6 @@ var combiner = {
     function createCustomSelectWithValueTable(element) {
       const elementName = element.name;
       const selectElement = form.body.form[elementName];
-      let value;
-      let name;
       element.values.forEach(item => {
         selectElement.values.push({name: item.name, value: item.value});
       });
