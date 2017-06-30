@@ -221,14 +221,10 @@ var combiner = {
       let value;
       let name;
       element.values.forEach(item => {
-        name = item.name;
-        value = item.value;
-        selectElement.values.push({name: name, value: value});
+        selectElement.values.push({name: item.name, value: item.value});
       });
-      const activeElement = element.values.filter(item => {
-        return item.isActive === true;
-      });
-      selectElement.value = activeElement[0].значение;
+      const activeElement = element.values.filter(item => item.isActive === true);
+      selectElement.value = activeElement[0].value;
     }
   },
 
