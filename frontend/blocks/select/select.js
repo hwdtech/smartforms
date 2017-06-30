@@ -71,15 +71,13 @@ export default class Select extends Base {
 
   sortOptionsByText() {
     const options = this.el.find('option');
-    const arr = options.map(function () {
-      return {
-        text: this.text,
-        value: this.value
-      };
-    });
+    const arr = options.map(() => ({
+      text: this.text,
+      value: this.value
+    }));
 
     arr.sort((option1, option2) => String.prototype.localeCompare.call(option1.text, option2.text));
-    options.each(function (i) {
+    options.each(i => {
       this.value = arr[i].value;
       this.text = arr[i].text;
     });
