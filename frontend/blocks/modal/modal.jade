@@ -33,7 +33,7 @@ mixin buttonClose
 
                         .header-title
                             h4.title= title
-                            h5.subtitle= subtitle
+                            h5.subtitle!= subtitle
 
             .modal-body(class=isPanelGroup ? "with-panel-group" : "")
                 if !title
